@@ -1,0 +1,78 @@
+/* NiceyBud content data — edit here to update services, products and blog posts site-wide. */
+window.NB = window.NB || {};
+
+NB.icons = {
+  agent: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="4"/><path d="M12 3v4M9 12h.01M15 12h.01M9.5 16h5M2 12v2M22 12v2"/></svg>',
+  auto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+  megaphone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 8a5 5 0 0 1 0 8M18 5a9 9 0 0 1 0 14"/></svg>',
+  pen: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"/></svg>',
+  brush: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg>',
+  research: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>',
+  rocket: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>',
+  code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 7l-10 6L2 7"/></svg>',
+  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6.5 8-13a8 8 0 1 0-16 0c0 6.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+  spark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-7-6.1 7H1.7l8.1-9.3L1 2h7l4.8 6.4zm-1.2 18h1.9L7.4 3.9H5.4z"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+  github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+  bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>'
+};
+
+NB.services = [
+  { id: 'agentic-ai', icon: 'agent', title: 'Agentic AI', short: 'Autonomous AI agents that research, decide and act across your tools — 24/7.', tags: ['LLM Agents', 'RAG', 'Tool-use', 'Copilots'], long: 'We design custom AI agents that plug into your CRM, inbox, docs and databases. They triage leads, answer customers, draft reports and hand off to humans only when it matters.' },
+  { id: 'automation', icon: 'auto', title: 'Automation', short: 'Kill busywork with workflows that run themselves — from ops to finance.', tags: ['Zapier', 'n8n', 'Make', 'APIs'], long: 'We map your repetitive processes and replace them with reliable, monitored pipelines. Typical clients win back 20+ hours per person every month.' },
+  { id: 'marketing', icon: 'megaphone', title: 'Marketing', short: 'AI-powered growth: content engines, performance ads and SEO that compounds.', tags: ['SEO', 'Paid Ads', 'Content', 'Email'], long: 'Data-driven campaigns with AI-assisted creative testing at a scale that used to need a 20-person team. We obsess over CAC, LTV and pipeline — not vanity metrics.' },
+  { id: 'branding', icon: 'pen', title: 'Branding & Identity', short: 'Bold identities with strategy, story and systems that scale everywhere.', tags: ['Strategy', 'Logo', 'Voice', 'Guidelines'], long: 'Positioning, naming, visual identity and verbal voice — packaged into living brand systems your team can actually use.' },
+  { id: 'design', icon: 'brush', title: 'Web & Product Design', short: 'Interfaces that feel alive — websites, apps and dashboards people love.', tags: ['UI/UX', 'Web', 'Motion', '3D'], long: 'From wireframe to pixel-perfect build. Motion-rich websites, SaaS dashboards and mobile apps designed for conversion and delight.' },
+  { id: 'research', icon: 'research', title: 'Research & Innovation', short: 'R&D sprints that turn fuzzy ideas into validated AI prototypes in weeks.', tags: ['Prototyping', 'Market Intel', 'Data'], long: 'Market research, competitor intelligence and rapid AI prototyping. We help you decide what to build before you spend the budget.' },
+  { id: 'productivity', icon: 'rocket', title: 'Productivity Solutions', short: 'Internal tools, AI copilots and dashboards that make teams 10x sharper.', tags: ['Internal Tools', 'Dashboards', 'Training'], long: 'Custom internal tools, knowledge bases and AI training for your team so the whole company moves faster — not just the tech folks.' }
+];
+
+NB.products = [
+  { id: 'budbot', name: 'BudBot', cat: 'agents', badge: 'Bestseller', price: 49, unit: '/mo', hue: ['#2ef2b6', '#22d3ee'], desc: 'A plug-and-play AI support agent trained on your docs. Answers customers in 40+ languages.', features: ['Trains on your site & PDFs in minutes', 'Live handoff to humans', 'WhatsApp, web & email channels', 'Analytics on every conversation'] },
+  { id: 'flowforge', name: 'FlowForge', cat: 'automation', badge: 'New', price: 29, unit: '/mo', hue: ['#b6ff5c', '#2ef2b6'], desc: 'Visual automation builder with AI steps. Connect 300+ apps without writing code.', features: ['Drag-and-drop workflow canvas', 'AI steps: summarize, classify, extract', '300+ app integrations', 'Error alerts & retries'] },
+  { id: 'brandkit-ai', name: 'BrandKit AI', cat: 'design', badge: 'Popular', price: 99, unit: ' one-time', hue: ['#a78bfa', '#22d3ee'], desc: 'Generate a full brand starter kit — logo concepts, palette, type and social templates.', features: ['20 logo directions', 'Color + typography system', '50 social templates', 'Exportable brand guide PDF'] },
+  { id: 'pulse', name: 'Pulse Analytics', cat: 'marketing', badge: 'Beta', price: 39, unit: '/mo', hue: ['#22d3ee', '#3b82f6'], desc: 'Marketing dashboard that explains your numbers in plain English with AI insights.', features: ['GA4, Meta, Google Ads sync', 'Weekly AI insight digest', 'Anomaly alerts', 'Shareable client reports'] },
+  { id: 'scribe', name: 'Scribe Studio', cat: 'marketing', badge: '', price: 19, unit: '/mo', hue: ['#2ef2b6', '#b6ff5c'], desc: 'On-brand content engine for blogs, ads and emails — trained on your voice.', features: ['Brand-voice fine tuning', 'SEO brief generator', 'Multi-channel repurposing', 'Plagiarism & fact checks'] },
+  { id: 'opsdesk', name: 'OpsDesk', cat: 'productivity', badge: '', price: 59, unit: '/mo', hue: ['#f472b6', '#a78bfa'], desc: 'An internal AI copilot for your team — knowledge base, SOPs and task automation in one.', features: ['Searches Drive, Notion & Slack', 'Auto-generated SOPs', 'Role-based permissions', 'Meeting notes → tasks'] },
+  { id: 'leadhunter', name: 'LeadHunter', cat: 'agents', badge: 'Hot', price: 79, unit: '/mo', hue: ['#fb923c', '#2ef2b6'], desc: 'An autonomous prospecting agent that finds, enriches and qualifies leads while you sleep.', features: ['ICP-based lead discovery', 'Enrichment & scoring', 'Personalized outreach drafts', 'CRM sync'] },
+  { id: 'pixelmuse', name: 'PixelMuse', cat: 'design', badge: '', price: 25, unit: '/mo', hue: ['#22d3ee', '#a78bfa'], desc: 'AI creative studio for ad visuals, mockups and product shots in your brand style.', features: ['Brand-locked image generation', 'Ad size auto-resizing', 'Background & product swaps', 'Team libraries'] },
+  { id: 'automation-audit', name: 'Automation Audit', cat: 'automation', badge: 'Service', price: 499, unit: ' one-time', hue: ['#b6ff5c', '#22d3ee'], desc: 'A 2-week deep dive into your ops with a prioritized roadmap of automations and ROI.', features: ['Process mapping workshops', 'ROI-ranked opportunity list', 'Tool stack recommendations', '30-day implementation plan'] }
+];
+
+NB.posts = [
+  { slug: 'agentic-ai-small-business', title: 'Agentic AI for small businesses: a practical 2026 playbook', cat: 'AI', date: '2026-11-18', read: 8, author: 'Hasan A.', hue: ['#2ef2b6', '#22d3ee'], word: 'Agents', excerpt: 'AI agents aren\'t just for big tech anymore. Here\'s how small teams are deploying them to win back hours every week.', featured: true },
+  { slug: 'automation-stack', title: 'The 7-tool automation stack we install for every client', cat: 'Automation', date: '2026-11-04', read: 6, author: 'Sara K.', hue: ['#b6ff5c', '#2ef2b6'], word: 'Flow', excerpt: 'Our battle-tested combo of tools that quietly runs operations for dozens of growing companies.' },
+  { slug: 'brand-in-ai-era', title: 'Why your brand matters more in the age of AI content', cat: 'Branding', date: '2026-10-22', read: 5, author: 'Leo M.', hue: ['#a78bfa', '#22d3ee'], word: 'Brand', excerpt: 'When everyone can generate content, the only moat left is a brand people recognize and trust.' },
+  { slug: 'seo-ai-search', title: 'SEO is changing: how to rank in AI-powered search', cat: 'Marketing', date: '2026-10-09', read: 7, author: 'Aisha R.', hue: ['#22d3ee', '#3b82f6'], word: 'Search', excerpt: 'Answer engines are rewriting the rules. Here\'s what still works and what to start doing today.' },
+  { slug: 'design-that-moves', title: 'Design that moves: motion as a conversion tool', cat: 'Design', date: '2026-09-27', read: 4, author: 'Leo M.', hue: ['#f472b6', '#a78bfa'], word: 'Motion', excerpt: 'Animation isn\'t decoration. Used right, it guides attention, explains products and lifts conversions.' },
+  { slug: 'prompt-ops', title: 'PromptOps: treating prompts like production code', cat: 'AI', date: '2026-09-12', read: 9, author: 'Hasan A.', hue: ['#fb923c', '#2ef2b6'], word: 'Prompt', excerpt: 'Versioning, testing and monitoring your prompts is the difference between a demo and a product.' },
+  { slug: 'productivity-myths', title: '5 productivity myths AI finally killed', cat: 'Productivity', date: '2026-08-30', read: 5, author: 'Sara K.', hue: ['#2ef2b6', '#b6ff5c'], word: 'Focus', excerpt: 'Inbox zero, multitasking and more — what actually makes teams faster when AI is in the loop.' }
+];
+
+NB.postBody = function (p) {
+  return `
+<p>Every week we talk to founders who feel the same tension: <strong>AI is clearly changing everything, but where do we actually start?</strong> This article is our honest, practical answer — based on real projects we\'ve shipped at NiceyBud.</p>
+<h2 id="s1">Start with the boring work</h2>
+<p>The highest-ROI wins are rarely the flashy ones. They hide in repetitive tasks: copying data between tools, answering the same questions, writing weekly reports. Make a list of every task your team repeats more than five times a week. That list is your roadmap.</p>
+<div class="callout">💡 <strong>Rule of thumb:</strong> if a task follows a pattern a new hire could learn in a day, an AI workflow can probably do 80% of it.</div>
+<h2 id="s2">Design the loop, not the bot</h2>
+<p>The magic of ${p.cat === 'AI' ? 'agentic systems' : 'modern systems'} isn\'t a single clever prompt — it\'s the loop: <em>observe → decide → act → check</em>. Give your system clear goals, the right tools and guardrails, and a human checkpoint where the stakes are high.</p>
+<blockquote>“The best AI projects feel less like magic and more like a really reliable colleague.”</blockquote>
+<ul><li>Define success metrics before you build anything.</li><li>Keep a human in the loop for irreversible actions.</li><li>Log everything — you\'ll thank yourself later.</li></ul>
+<h2 id="s3">Ship small, measure, expand</h2>
+<p>Pick one workflow. Ship it in two weeks. Measure hours saved and errors avoided. Then expand. Our clients who follow this pattern see results in the first month instead of a year-long "transformation".</p>
+<pre><code>workflow = nicey.flow("weekly-report")
+  .pull(["ga4", "hubspot", "stripe"])
+  .summarize(tone="executive")
+  .send(to="#leadership")</code></pre>
+<h2 id="s4">Where NiceyBud fits in</h2>
+<p>We help teams go from <em>"we should use AI"</em> to <em>"it\'s running in production"</em>. If you\'d like a second pair of eyes on your roadmap, <a href="contact.html" style="color:var(--mint)">book a free strategy call</a> — no slides, just practical ideas.</p>`;
+};

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — NiceyBud</title>
+  <meta name="description" content="Start a project with NiceyBud. Email support@niceybud.com or niceybud@gmail.com.">
+  <meta name="theme-color" content="#04090f">
+  <meta property="og:image" content="assets/banner.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<main>
+  <header class="page-hero">
+    <svg class="page-hero__deco" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="dg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b6ff5c"/><stop offset=".5" stop-color="#2ef2b6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><g fill="none" stroke="url(#dg)" stroke-width="1"><circle cx="200" cy="200" r="190" stroke-dasharray="4 8"><animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="60s" repeatCount="indefinite"/></circle><circle cx="200" cy="200" r="140" opacity=".6"/><circle cx="200" cy="200" r="90" stroke-dasharray="60 30"><animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="20s" repeatCount="indefinite"/></circle></g><image href="assets/logo.png" x="140" y="140" width="120" height="120" opacity=".9"/></svg>
+    <div class="container">
+      <div class="breadcrumbs" data-reveal><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+      <span class="eyebrow" data-reveal><i></i>Let's talk</span>
+      <h1 class="h1" data-split>Say <span class="grad-text" data-nosplit>hello</span>.</h1>
+      <p class="lead" data-reveal style="--d:.3s">Tell us what you're building. We reply within one business day — usually much faster.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container contact-grid">
+      <div class="contact-cards">
+        <a href="mailto:support@niceybud.com" class="card contact-card" data-reveal data-cursor="Email"><div class="svc__icon">✉️</div><div><small>Support & projects</small><strong>support@niceybud.com</strong></div></a>
+        <a href="mailto:niceybud@gmail.com" class="card contact-card" data-reveal style="--d:.1s" data-cursor="Email"><div class="svc__icon">💌</div><div><small>General enquiries</small><strong>niceybud@gmail.com</strong></div></a>
+        <div class="card contact-card" data-reveal style="--d:.2s"><div class="svc__icon">⏱️</div><div><small>Response time</small><strong>&lt; 24 hours</strong></div></div>
+        <div class="card contact-card" data-reveal style="--d:.3s"><div class="svc__icon">🌍</div><div><small>Where</small><strong>Remote-first · Worldwide</strong></div></div>
+        <div data-reveal style="--d:.4s;display:flex;gap:10px;flex-wrap:wrap;margin-top:10px"><button class="btn btn--ghost btn--sm" data-copy="support@niceybud.com">Copy support email</button><button class="btn btn--ghost btn--sm" data-copy="niceybud@gmail.com">Copy Gmail</button></div>
+      </div>
+      <div class="card" data-reveal="right">
+        <form class="form" id="contactForm" novalidate>
+          <h2 class="h3">Start a project ✦</h2>
+          <div class="row">
+            <div class="field"><input id="name" name="name" placeholder=" " required><label for="name">Your name</label></div>
+            <div class="field"><input id="email" name="email" type="email" placeholder=" " required><label for="email">Email</label></div>
+          </div>
+          <div class="field"><input id="company" name="company" placeholder=" "><label for="company">Company (optional)</label></div>
+          <div><p style="font-size:14px;color:var(--text-dim);margin-bottom:10px">I'm interested in…</p><div class="pills"><label><input type="checkbox" name="interest" value="agentic-ai"><span>Agentic AI</span></label><label><input type="checkbox" name="interest" value="automation"><span>Automation</span></label><label><input type="checkbox" name="interest" value="marketing"><span>Marketing</span></label><label><input type="checkbox" name="interest" value="branding"><span>Branding</span></label><label><input type="checkbox" name="interest" value="design"><span>Web & Design</span></label><label><input type="checkbox" name="interest" value="research"><span>Research</span></label><label><input type="checkbox" name="interest" value="productivity"><span>Productivity</span></label></div></div>
+          <div class="budget"><div style="display:flex;justify-content:space-between;align-items:end"><span style="font-size:14px;color:var(--text-dim)">Estimated budget</span><output id="budgetOut">$5k</output></div><input type="range" id="budget" min="1000" max="50000" step="500" value="5000" aria-label="Budget"></div>
+          <div class="field"><textarea id="msg" name="message" placeholder=" " required></textarea><label for="msg">Tell us about your project</label></div>
+          <button class="btn btn--primary" style="justify-content:center">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        </form>
+        <div class="form-success"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><h3 class="h2" style="font-size:44px">You're on our radar!</h3><p class="lead" style="margin:16px auto 28px">Thanks for reaching out. To send it straight to our inbox right now, tap below.</p><a id="mailFallback" class="btn btn--primary" href="mailto:support@niceybud.com">Open in email app →</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

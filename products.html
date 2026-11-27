@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — NiceyBud</title>
+  <meta name="description" content="AI agents, automation tools and creative software by NiceyBud.">
+  <meta name="theme-color" content="#04090f">
+  <meta property="og:image" content="assets/banner.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="products">
+<main>
+  <header class="page-hero">
+    <svg class="page-hero__deco" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="dg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b6ff5c"/><stop offset=".5" stop-color="#2ef2b6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><g fill="none" stroke="url(#dg)" stroke-width="1"><circle cx="200" cy="200" r="190" stroke-dasharray="4 8"><animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="60s" repeatCount="indefinite"/></circle><circle cx="200" cy="200" r="140" opacity=".6"/><circle cx="200" cy="200" r="90" stroke-dasharray="60 30"><animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="20s" repeatCount="indefinite"/></circle></g><image href="assets/logo.png" x="140" y="140" width="120" height="120" opacity=".9"/></svg>
+    <div class="container">
+      <div class="breadcrumbs" data-reveal><a href="index.html">Home</a><span>/</span><span>Products</span></div>
+      <span class="eyebrow" data-reveal><i></i>The NiceyBud shelf</span>
+      <h1 class="h1" data-split>Plug-in <span class="grad-text" data-nosplit>superpowers</span>.</h1>
+      <p class="lead" data-reveal style="--d:.3s">Ready-made AI agents, automation tools and creative kits — battle-tested on client projects, now available for everyone.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="toolbar" data-reveal>
+        <div class="filters">
+          <button class="filter on" data-cat="all">All</button><button class="filter" data-cat="agents">AI Agents</button><button class="filter" data-cat="automation">Automation</button><button class="filter" data-cat="marketing">Marketing</button><button class="filter" data-cat="design">Design</button><button class="filter" data-cat="productivity">Productivity</button>
+        </div>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="pSearch" type="search" placeholder="Search products…" aria-label="Search products"></label>
+      </div>
+      <div class="products" id="productGrid"></div>
+    </div>
+  </section>
+  <div class="marquee"><div class="marquee__track"><span>14-day free trial</span><span>No credit card</span><span>Cancel anytime</span><span>Human support</span><span>14-day free trial</span><span>No credit card</span><span>Cancel anytime</span><span>Human support</span></div></div>
+  <section class="section"><div class="container"><div class="cta" data-reveal="scale"><div class="cta__blob"></div><span class="eyebrow"><i></i>Custom builds</span><h2 class="h2">Need a product that<br>doesn't exist yet?</h2><p class="lead">We build custom AI tools tailored to your workflow — usually in under six weeks.</p><div class="cta__btns"><a href="contact.html" class="btn btn--primary">Pitch us your idea →</a></div></div></div></section>
+</main>
+
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — NiceyBud</title>
+  <meta name="description" content="Insights on AI agents, automation, marketing, branding and design from the NiceyBud team.">
+  <meta name="theme-color" content="#04090f">
+  <meta property="og:image" content="assets/banner.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="blog">
+<main>
+  <header class="page-hero">
+    <svg class="page-hero__deco" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="dg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b6ff5c"/><stop offset=".5" stop-color="#2ef2b6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><g fill="none" stroke="url(#dg)" stroke-width="1"><circle cx="200" cy="200" r="190" stroke-dasharray="4 8"><animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="60s" repeatCount="indefinite"/></circle><circle cx="200" cy="200" r="140" opacity=".6"/><circle cx="200" cy="200" r="90" stroke-dasharray="60 30"><animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="20s" repeatCount="indefinite"/></circle></g><image href="assets/logo.png" x="140" y="140" width="120" height="120" opacity=".9"/></svg>
+    <div class="container">
+      <div class="breadcrumbs" data-reveal><a href="index.html">Home</a><span>/</span><span>Blog</span></div>
+      <span class="eyebrow" data-reveal><i></i>The NiceyBud journal</span>
+      <h1 class="h1" data-split>Ideas worth <span class="grad-text" data-nosplit>automating</span>.</h1>
+      <p class="lead" data-reveal style="--d:.3s">Playbooks, experiments and hot takes on AI, growth and design — written by the people building it every day.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div id="featured"></div>
+      <div class="toolbar" data-reveal>
+        <div class="filters" id="blogFilters"></div>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="bSearch" type="search" placeholder="Search articles…" aria-label="Search articles"><kbd>/</kbd></label>
+      </div>
+      <div class="posts" id="postGrid"></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0"><div class="container"><div class="cta" data-reveal="scale"><div class="cta__blob"></div><span class="eyebrow"><i></i>Newsletter</span><h2 class="h2">One email. Zero fluff.</h2><p class="lead">The best AI tactics we discover each week, straight to your inbox.</p><form class="newsletter" data-newsletter style="margin:0 auto"><input type="email" placeholder="you@company.com" required aria-label="Email"><button class="btn btn--primary btn--sm">Subscribe</button></form></div></div></section>
+</main>
+
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
